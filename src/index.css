@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');@import "tailwindcss";
+body {
+    margin-top: 250px;
+}
+/* تصغير حجم الأسهم وتغيير لونها */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important; /* حجم السهم نفسه - صغره زي ما تحب */
+  font-weight: bold;
+}
+
+/* تحسين شكل الدائرة حول السهم (اختياري) */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 35px !important;  /* عرض الحاوية */
+  height: 35px !important; /* ارتفاع الحاوية */
+  background-color: rgba(255, 255, 255, 0.3); /* خلفية شفافة زي الـ SaaS */
+  backdrop-filter: blur(4px);
+  border-radius: 50%; /* خليها دائرة */
+  color: #2563eb !important; /* لون السهم أزرق */
+}
+
+/* إخفاء الأسهم تماماً في الشاشات الصغيرة جداً لـ UX أفضل */
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+/* :root {
+    --min-color: #6890f0;
+    --p-color: #7b7b7b;
+    --bg-color: #3f3f3f;
+    --white-color: #fff;
+    --color-heading: #253237;
+    --border-color: #d6d6d6;
+}
+
+
+/* img{
+  width: 100%;
+} */
+/* h1,h2,h3,h4,h5,h6{
+  color: var(--color-heading);
+  font-family: "Inter", sans-serif;
+}
+span{
+  color: var(--min-color);
+}
+p{
+  color: var(--p-color);
+}
+input,button,select,textarea{
+  outline: none;
+  border: none;
+}  */
